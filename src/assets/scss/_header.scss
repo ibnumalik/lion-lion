@@ -1,0 +1,36 @@
+.header {
+  background: $red;
+  height: 40px;
+}
+
+.navbar {
+  background: linear-gradient($white-grey, $light-grey);
+  padding: 20px 0;
+  // height: 80px;
+
+  &__logo {
+    height: 120px;
+    width: 330px;
+    border: 1px solid $grey;
+    background-color: #ffffff;
+  }
+
+  .nav-item {
+    padding:0 25px;
+    &:not(:last-child) {
+      border-right: 1px solid #d5d5d5;
+    }
+  }
+
+
+  .nav-link {
+    color: $red;
+    font-weight: bold;
+  }
+
+  .active {
+    .nav-link {
+      color: #000000;
+    }
+  }
+}
