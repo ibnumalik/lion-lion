@@ -1,0 +1,8 @@
+.photos {
+  &__container {
+    border: 1px solid $border-grey;
+    border-radius: 4px;
+    padding: 1.5rem;
+    background-color: $bg-grey;
+  }
+}
