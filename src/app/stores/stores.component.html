@@ -1,0 +1,40 @@
+<ul class="store-filter flex-center">
+  <li class="store-filter__item" *ngFor="let place of places">
+    {{ place }}
+  </li>
+</ul>
+
+<div class="row">
+  <div class="col-4" *ngFor="let store of stores">
+    <div class="store">
+      <div class="store__photo"
+        [ngStyle]="{
+          'background-image': 'url(' + store.image + ')'
+        }"></div>
+
+      <div class="store__content">
+        <div class="store__detail">
+          <h4 class="store__detail-key">{{ store.name }}</h4>
+          <p class="store__detail-value">{{ store.address }}</p>
+        </div>
+
+        <div class="store__detail">
+          <h4 class="store__detail-key">Operating Hours</h4>
+          <p class="store__detail-value">{{ store.operation_hours }}</p>
+        </div>
+
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="store__content">
+          <div class="store__detail">
+            <h4 class="store__detail-key">Telephone</h4>
+            <p class="store__detail-value">{{ store.phone }}</p>
+          </div>
+      </div>
+
+      <div class="store__footer">Get Directions</div>
+    </div>
+  </div>
+</div>

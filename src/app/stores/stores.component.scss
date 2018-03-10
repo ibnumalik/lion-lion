@@ -1,0 +1,49 @@
+@import "config";
+
+.store-filter {
+  background-color: $bg-grey;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 2rem 0;
+  padding: 0;
+
+  &__item {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+
+    &.active, &:hover {
+      background-color: #333333;
+      color: $white-grey;
+    }
+  }
+}
+
+.store {
+  border: 2px solid #1a0154;
+  margin: 1rem 0;
+
+  &__photo {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+  }
+
+  &__content {
+    padding: 1rem;
+  }
+
+  &__detail-key {
+    font-size: 1rem;
+  }
+
+  .divider {
+    border-top: 2px solid #1a0154;
+  }
+
+  &__footer {
+    background-color: #1a0154;
+    color: $white-grey;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+}
