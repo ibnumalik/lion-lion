@@ -1,0 +1,17 @@
+@import "config";
+
+.footer {
+  border-top: 1px solid #adadad;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+
+  &__logo {
+    align-self: center;
+  }
+
+  &__text {
+    font-size: 0.75rem;
+    color: $font-color;
+  }
+}
