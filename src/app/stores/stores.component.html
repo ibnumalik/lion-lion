@@ -1,11 +1,14 @@
 <ul class="store-filter flex-center">
-  <li class="store-filter__item" *ngFor="let place of places">
+  <li
+    class="store-filter__item"
+    *ngFor="let place of places"
+    (click)="filterStorePlace(place)">
     {{ place }}
   </li>
 </ul>
 
 <div class="row">
-  <div class="col-4" *ngFor="let store of stores">
+  <div class="col-4" *ngFor="let store of stores | storeFilter:userFilter">
     <div class="store">
       <div class="store__photo"
         [ngStyle]="{
