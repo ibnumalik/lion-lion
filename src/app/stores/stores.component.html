@@ -1,9 +1,10 @@
 <ul class="store-filter flex-center">
   <li
-    class="store-filter__item"
     *ngFor="let place of places"
+    class="store-filter__item"
+    [ngClass]="{'active': place.selected}"
     (click)="filterStorePlace(place)">
-    {{ place }}
+    {{ place.name }}
   </li>
 </ul>
 

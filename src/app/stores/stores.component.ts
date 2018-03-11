@@ -8,6 +8,7 @@ import { Http } from '@angular/http';
 })
 export class StoresComponent{
   stores: any[];
+  uniquePlaces: any[];
   places: any[];
   userFilter: Object;
 
@@ -16,7 +17,10 @@ export class StoresComponent{
       this.stores = response.json();
       this.collectPlaces();
     });
+    this.filterStoreStatus();
+  }
 
+  filterStoreStatus() {
     this.userFilter = {
       itemToFilter: 'status',
       filterRule: true
@@ -24,13 +28,31 @@ export class StoresComponent{
   }
 
   collectPlaces() {
-    this.places = Array.from(new Set(this.stores.map((store: any) => store.state)));
+    this.uniquePlaces = Array.from(new Set(this.stores.map((store: any) => store.state)));
+    this.places = this.uniquePlaces.map(place => {
+      return {
+        name: place,
+        selected: false
+      }
+    });
   }
 
   filterStorePlace(place) {
+    if (place.selected) {
+      place.selected = false;
+      this.filterStoreStatus();
+      return;
+    }
+
+    for (let i = 0; i < this.places.length; i++) {
+      const _place = this.places[i];
+      _place.selected = false;
+    }
+
+    place.selected = true;
     this.userFilter = {
       itemToFilter: 'state',
-      filterRule: place
+      filterRule: place.name
     };
   }
 }
