@@ -18,8 +18,6 @@ export class StoresComponent{
   }
 
   collectPlaces() {
-    console.log(this.stores);
     this.places = Array.from(new Set(this.stores.map((store: any) => store.state)));
   }
-
 }

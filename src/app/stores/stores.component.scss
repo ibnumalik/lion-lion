@@ -34,6 +34,7 @@
 
   &__detail-key {
     font-size: 1rem;
+    font-weight: bold;
   }
 
   .divider {
@@ -42,8 +43,10 @@
 
   &__footer {
     background-color: #1a0154;
-    color: $white-grey;
+    color: white;
+    display: block;
     padding: 0.5rem 0;
     text-align: center;
+    text-decoration: none;
   }
 }
