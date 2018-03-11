@@ -8,6 +8,7 @@ import { BlogComponent } from './blog/blog.component';
 import { StoresComponent } from './stores/stores.component';
 import { FooterComponent } from './footer/footer.component';
 import { StoreFilterPipe } from './store-filter.pipe';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { StoreFilterPipe } from './store-filter.pipe';
     BlogComponent,
     StoresComponent,
     FooterComponent,
-    StoreFilterPipe
+    StoreFilterPipe,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
