@@ -8,7 +8,18 @@
 @import "photos";
 @import "section";
 
+body {
+  padding-top: 10rem;
+}
 stores {
   display: block;
   margin-bottom: 2rem;
+}
+
+app-navbar {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
 }

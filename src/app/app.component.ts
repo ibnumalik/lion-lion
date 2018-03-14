@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  scrolled = false;
+
+  onWindowScroll($event) {
+    if(window.pageYOffset > 50) {
+      this.scrolled = true;
+    } else {
+      this.scrolled = false;
+    }
+  }
 }

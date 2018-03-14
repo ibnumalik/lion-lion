@@ -1,6 +1,6 @@
-<div class="header"></div>
-
-<app-navbar></app-navbar>
+<app-navbar
+  (window:scroll)="onWindowScroll($event)"
+  [ngClass]="{'shrinked': scrolled}"></app-navbar>
 
 <div class="container mt-5">
   <button class="btn btn-orange">+ instructions</button>
