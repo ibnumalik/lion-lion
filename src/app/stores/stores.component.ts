@@ -11,6 +11,13 @@ export class StoresComponent{
   uniquePlaces: any[];
   places: any[];
   userFilter: Object;
+  userSortPreferences = 'name';
+  sortOptions = [
+    {name: 'Adress', value: 'adress'},
+    {name: 'Name', value: 'name'},
+    {name: 'Operation Hours', value: 'operation_hours'},
+    {name: 'State', value: 'state'}
+  ];
 
   constructor(private http: Http) {
     this.http.get('./assets/stores.json').subscribe(response => {

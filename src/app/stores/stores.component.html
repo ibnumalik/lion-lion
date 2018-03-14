@@ -8,8 +8,15 @@
   </li>
 </ul>
 
+<div class="sorting">
+  Sort by
+  <select [(ngModel)]="userSortPreferences">
+    <option *ngFor="let sorting of sortOptions" [ngValue]="sorting.value">{{sorting.name}}</option>
+  </select>
+</div>
+
 <div class="row">
-  <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let store of stores | storeFilter:userFilter">
+  <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let store of stores | storeFilter:userFilter | sortBy:userSortPreferences">
     <div class="store">
       <div class="store__photo"
         [ngStyle]="{

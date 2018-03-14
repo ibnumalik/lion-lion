@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { StoreFilterPipe } from './store-filter.pipe';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormComponent } from './form/form.component';
+import { SortByPipe } from './sort-by.pipe';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FormComponent } from './form/form.component';
     FooterComponent,
     StoreFilterPipe,
     NavbarComponent,
-    FormComponent
+    FormComponent,
+    SortByPipe
   ],
   imports: [
     BrowserModule,
