@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
+import { storeFilter } from "./storeFilter";
 
 @Component({
   selector: 'stores',
@@ -10,7 +11,8 @@ export class StoresComponent{
   stores: any[];
   uniquePlaces: any[];
   places: any[];
-  userFilter: Object;
+  filteredPlaces = [];
+  userFilter: storeFilter;
   userSortPreferences = 'name';
   sortOptions = [
     {name: 'Adress', value: 'adress'},
@@ -30,7 +32,7 @@ export class StoresComponent{
   filterStoreStatus() {
     this.userFilter = {
       itemToFilter: 'status',
-      filterRule: true
+      filterRules: [true]
     }
   }
 
@@ -45,21 +47,27 @@ export class StoresComponent{
   }
 
   filterStorePlace(place) {
+
     if (place.selected) {
       place.selected = false;
-      this.filterStoreStatus();
-      return;
+      let index = this.filteredPlaces.indexOf(place.name);
+      this.filteredPlaces.splice(index, 1);
+
+      if(this.filteredPlaces.length == 0) {
+        this.filterStoreStatus();
+        return;
+      }
+    } else {
+
+      this.filteredPlaces.push(place.name);
+      place.selected = true;
     }
 
-    for (let i = 0; i < this.places.length; i++) {
-      const _place = this.places[i];
-      _place.selected = false;
-    }
+    console.log(this.filteredPlaces);
 
-    place.selected = true;
     this.userFilter = {
       itemToFilter: 'state',
-      filterRule: place.name
+      filterRules: this.filteredPlaces
     };
   }
 }

@@ -7,15 +7,21 @@ export class StoreFilterPipe implements PipeTransform {
 
   transform(stores: any[], filter): any {
     let itemToFilter = filter.itemToFilter;
-    let filterRule = filter.filterRule;
+    let filterRules: any[] = filter.filterRules;
+    let filteredStores = [];
 
     if (!stores || !filter) {
       return stores;
     }
 
-    return stores.filter(store => {
-      return store[itemToFilter] === filterRule
+    stores.filter(store => {
+      filterRules.forEach(rule => {
+        if(store[itemToFilter] === rule) {
+          filteredStores.push(store);
+        }
+      })
     });
+    return filteredStores;
   }
 
 }
