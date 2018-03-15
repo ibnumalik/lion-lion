@@ -1,0 +1,15 @@
+<ngb-carousel class="myCarousel" [activeId]="activeSliderId">
+  <ng-template ngbSlide *ngFor="let photo of photos">
+    <img class="slide__image" [src]="photo.src" alt="Random {{photo.name}} slide">
+  </ng-template>
+</ngb-carousel>
+
+<ul class="carousel-thumbnail">
+    <li class="carousel-thumbnail__item list-inline-item"
+      *ngFor="let photo of photos"
+      (click)="cycleToSlide(photo)">
+        <a class="selected">
+            <img class="carousel-thumbnail__img" [src]="photo.src">
+        </a>
+    </li>
+</ul>

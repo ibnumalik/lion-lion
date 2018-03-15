@@ -1,0 +1,21 @@
+.slide__image {
+  height: 500px;
+  width: 100%;
+}
+
+.carousel-thumbnail {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    cursor: pointer;
+  }
+  &__img {
+    width: 80px;
+    height: 60px;
+  }
+}

@@ -23,3 +23,9 @@ app-navbar {
   width: 100%;
   z-index: 9999;
 }
+
+.myCarousel {
+  .carousel-indicators {
+    display: none;
+  }
+}

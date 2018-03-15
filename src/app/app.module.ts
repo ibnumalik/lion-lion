@@ -12,6 +12,7 @@ import { StoreFilterPipe } from './store-filter.pipe';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormComponent } from './form/form.component';
 import { SortByPipe } from './sort-by.pipe';
+import { PhotosComponent } from './photos/photos.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SortByPipe } from './sort-by.pipe';
     StoreFilterPipe,
     NavbarComponent,
     FormComponent,
-    SortByPipe
+    SortByPipe,
+    PhotosComponent
   ],
   imports: [
     BrowserModule,
