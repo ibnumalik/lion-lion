@@ -8,6 +8,11 @@
   </li>
 </ul>
 
+<ul class="filter-status">
+  <span class="filter-status__label">Filtered by {{ userFilter.itemToFilter }}</span>
+  <li class="filter-status__item" *ngFor="let rule of userFilter.filterRules">{{ rule }}</li>
+</ul>
+
 <div class="sorting">
   Sort by
   <select [(ngModel)]="userSortPreferences">
