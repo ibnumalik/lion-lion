@@ -1,0 +1,38 @@
+.modal-dialog {
+  margin: 10rem auto;
+  @media only screen and (min-width: 992px) {
+    max-width: 860px;
+  }
+}
+.modal-content {
+  padding: 2rem;
+}
+.modal-header {
+  padding: 1rem 0;
+
+  .close {
+    background: #ffffff;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    opacity: 1;
+    padding: 6px 12px 20px;
+    position: absolute;
+    right: 1rem;
+    top: -1.5rem;
+  }
+}
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.modal-subtitle {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.list {
+  li {
+    font-size: 1rem;
+  }
+}

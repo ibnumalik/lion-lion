@@ -13,6 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FormComponent } from './form/form.component';
 import { SortByPipe } from './sort-by.pipe';
 import { PhotosComponent } from './photos/photos.component';
+import { InstructionsComponent } from './instructions/instructions.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { PhotosComponent } from './photos/photos.component';
     NavbarComponent,
     FormComponent,
     SortByPipe,
-    PhotosComponent
+    PhotosComponent,
+    InstructionsComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +35,7 @@ import { PhotosComponent } from './photos/photos.component';
     FormsModule,
     NgbModule.forRoot()
   ],
+  entryComponents: [InstructionsComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

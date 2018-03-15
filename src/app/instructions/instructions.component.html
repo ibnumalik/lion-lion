@@ -1,0 +1,87 @@
+<div class="modal-header">
+  <h4 class="modal-title">Instructions</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <h3 class="modal-subtitle"> The task: </h3>
+
+  <ul class="list">
+    <li>
+      Using stores.json file and lion-test.psd (as the mock up):
+    </li>
+    <li>
+      Implementation of the mockup as a full responsive template;
+    </li>
+    <li>
+      Header should be fixed and links take you the sections of the page via scroll;
+    </li>
+    <li>
+      A lightbox should be used to see the "instructions";
+    </li>
+    <li>
+      The form should have validation;
+    </li>
+  </ul>
+
+  <p>
+    For the places section, take this into account:
+  </p>
+  <ul class="list">
+    <li>
+      Show all the stores, only which their "status" is set to "true", into rows of 3
+    </li>
+    <li>
+      Display unique "state" values as filters, at the top of the page (Note: must be done dynamically - do not hard code this);
+    </li>
+    <li>
+      Implement filtering functionality on the state values, in which the stores of the same state as the filter, are loaded upon
+      click [example: We have "California" shown as a state and hence a filter at the top of the page, once it is clicked,
+      only the stores which their state is California are to be displayed];
+    </li>
+    <li>
+      Whenever a filter is clicked for a second time (unselected), show all the valid stores again ("status":"true").
+    </li>
+  </ul>
+
+  <h3 class="modal-subtitle">
+    Bonus points:
+  </h3>
+  <ul class="list">
+    <li>
+      Multi-filtering; in which multiple filters can be selected/unselected, and their stores are shown accordingly
+    </li>
+    <li>
+      Sorting functionality; in which the stores are sorted alphabetically based on their names (Note: this is not included in
+      the design, please use your own creativity to add this element to the page)
+    </li>
+    <li>
+      Creativity with the mobile template.
+    </li>
+  </ul>
+
+  <h3 class="modal-subtitle">
+    Rules:
+  </h3>
+  <ul class="list">
+    <li>
+      It has to be fully mobile responsive;
+    </li>
+    <li>
+      Any plugin/framework can be used;
+    </li>
+    <li>
+      Dynamic coding;
+    </li>
+    <li>
+      It must work on the current versions of Chrome, Firefox and Edge;
+    </li>
+    <li>
+      Use of SASS as CSS pre-processor;
+    </li>
+    <li>
+      Neat code, and comments where necessary
+    </li>
+  </ul>
+</div>
