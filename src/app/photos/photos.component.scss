@@ -10,6 +10,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: auto;
+
+  @media only screen and (max-width: 576px) {
+    display: none;
+  }
 
   &__item {
     cursor: pointer;

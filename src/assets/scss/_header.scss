@@ -2,20 +2,32 @@
   background: $red;
   height: 2.5rem;
   transition: all 0.5s ease;
+  @media only screen and (max-width: 576px) {
+    height: 1rem;
+  }
 }
 
 .navbar {
   background: linear-gradient($white-grey, $light-grey);
   padding: 1.25rem 0;
   transition: all 0.5s ease;
+  @media only screen and (max-width: 576px) {
+    padding: 1rem 0;
+    background: #ffffff;
+    border-bottom: 1px solid $grey;
+  }
 
   &__logo {
     height: 7.5rem;
     width: 20.625rem;
     border: 1px solid $grey;
     background-color: #ffffff;
-    @include media-breakpoint-only(xs) {
-      display: none !important;
+    @include media-breakpoint-down(lg) {
+      height: auto;
+      width: auto;
+      border: none;
+      background-color: none;
+      position: initial !important;
     }
   }
 
@@ -39,6 +51,9 @@
   }
 }
 
+.navbar-toggler {
+  margin-right: 0.5rem;
+}
 
 .shrinked {
   .header {

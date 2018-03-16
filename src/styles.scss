@@ -10,6 +10,9 @@
 
 body {
   padding-top: 10rem;
+  @include media-breakpoint-down(xs) {
+    padding-top: 8rem;
+  }
 }
 stores {
   display: block;

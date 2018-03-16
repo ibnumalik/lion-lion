@@ -6,6 +6,9 @@
 }
 .modal-content {
   padding: 2rem;
+  @media only screen and (max-width: 576px) {
+    padding: 1rem;
+  }
 }
 .modal-header {
   padding: 1rem 0;
