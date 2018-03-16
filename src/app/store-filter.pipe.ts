@@ -16,7 +16,7 @@ export class StoreFilterPipe implements PipeTransform {
 
     stores.filter(store => {
       filterRules.forEach(rule => {
-        if(store[itemToFilter] === rule) {
+        if(store[itemToFilter] === rule && store.status) {
           filteredStores.push(store);
         }
       })

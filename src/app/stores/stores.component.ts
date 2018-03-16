@@ -63,8 +63,6 @@ export class StoresComponent{
       place.selected = true;
     }
 
-    console.log(this.filteredPlaces);
-
     this.userFilter = {
       itemToFilter: 'state',
       filterRules: this.filteredPlaces

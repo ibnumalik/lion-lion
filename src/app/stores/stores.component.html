@@ -54,3 +54,7 @@
     </div>
   </div>
 </div>
+
+<div class="empty flex-center" *ngIf="(stores | storeFilter:userFilter)?.length === 0">
+  <p class="empty__text">No stores found!</p>
+</div>

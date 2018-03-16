@@ -74,3 +74,14 @@
     border: 1px solid $grey;
   }
 }
+
+.empty {
+  background: lightgray;
+  margin: 2rem auto;
+  padding: 2rem;
+  &__text {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 0;
+  }
+}
